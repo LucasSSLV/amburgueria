@@ -1,0 +1,42 @@
+.header {
+  background-color: #ea6906;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #ff9900; /* Muda a cor ao passar o mouse */
+}
+
