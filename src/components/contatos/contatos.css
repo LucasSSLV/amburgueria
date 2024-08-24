@@ -1,18 +1,43 @@
-/* Header.module.css */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
+.contact-section {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  align-items: start;
+  width: 100%;
+  padding: 20px 0;
+  height: 20px;
+  background-color: #ff9900;
+  text-align: center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 10px;
+
   p {
-    margin: 5px 0 0;
-    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
   }
-  
+}
+
+.contact-icon {
+  color: white;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #00ff55;
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #dfd2d2;
+}

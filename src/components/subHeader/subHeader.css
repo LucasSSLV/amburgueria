@@ -1,0 +1,28 @@
+.subH-section {
+  display: flex;
+}
+
+.subH-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.subH-text {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: start;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.subH-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.subH-text h2 {
+  font-size: 1.2em;
+}

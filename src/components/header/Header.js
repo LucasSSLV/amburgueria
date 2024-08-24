@@ -1,8 +1,22 @@
-import React from "react";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import styles from "./header.module.css"; // ou styled-components
+import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import styles from "./header.module.css";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Fecha o menu após a navegação
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
@@ -10,23 +24,19 @@ const Header = () => {
           <h1 className={styles.title}>AM BURGUER</h1>
           <p className={styles.subtitle}>Os melhores hambúrgueres da cidade!</p>
         </div>
-        <div className={styles.icons}>
-          <a
-            href="https://www.instagram.com/am_burguer1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram className={styles.icon} />
-          </a>
-          <a
-            href="https://wa.me/55889981508040"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp className={styles.icon} />
-          </a>
+        <div className={styles.burgerMenu}>
+          <FaBars onClick={toggleMenu} className={styles.burgerIcon} />
         </div>
       </div>
+      {isMenuOpen && (
+        <nav className={styles.navMenu}>
+          <ul>
+            <li onClick={() => scrollToSection("contact")}>Contato</li>
+            <li onClick={() => scrollToSection("products")}>Produtos</li>
+            <li onClick={() => scrollToSection("about")}>Sobre Nós</li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };

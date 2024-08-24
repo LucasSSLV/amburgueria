@@ -1,8 +1,6 @@
 .header {
-  background-color: #ea6906;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+  background-color: #ff9900;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,27 +14,60 @@
 }
 
 .title {
-  margin: 0;
-  font-size: 24px;
+  font-size: 1.5em;
+  color: white;
 }
 
 .subtitle {
-  margin: 5px 0 0;
-  font-size: 16px;
+  font-size: 1em;
+  color: white;
 }
 
-.icons {
-  display: flex;
-  gap: 15px;
+.burgerMenu {
+  cursor: pointer;
 }
 
-.icon {
-  color: #fff;
-  font-size: 24px;
-  transition: color 0.3s;
+.burgerIcon {
+  font-size: 1.5em;
+  color: white;
 }
 
-.icon:hover {
-  color: #ff9900; /* Muda a cor ao passar o mouse */
+.navMenu {
+  background-color: #db86078f;
+  position: absolute;
+  top: 60px;
+  right: 40px; /* Ajuste a posição para ficar ao lado do ícone do menu */
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navMenu li {
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navMenu li:last-child {
+  border-bottom: none;
+}
+
+.navMenu li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navMenu {
+    top: 72px;
+    right: 20px;
+    width: 100px;
+  }
+}
