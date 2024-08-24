@@ -1,0 +1,131 @@
+section {
+  background-color: #ff2600eb;
+  margin: 0;
+  width: 100%;
+  padding-top: 1px;
+}
+
+.geral {
+  height: 400px;
+  display: flex;
+  /* padding: 10px; */
+  align-items: center;
+
+}
+.text {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.burger-item,
+.drink-item {
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: visible; /* Permite que a imagem cresça além do seu contêiner */
+}
+
+.burger-item:hover,
+.drink-item:hover {
+  transform: scale(1.01);
+}
+
+.burger-img,
+.drink-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: scale-down;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  opacity: 0;
+}
+.burger-item:hover .overlay,
+.drink-item:hover .overlay {
+  opacity: 1;
+}
+
+.burger-name,
+.drink-name {
+  background-color: #ff2600eb;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+.order-button {
+  padding: 5px 10px;
+  background-color: #ff2600eb;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e68a00;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots {
+  bottom: 10px;
+  /* border: 1px solid #ff9900; */
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #ff1212;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff9900;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .burger-img,
+  .drink-img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1em;
+  }
+
+  .burger-img,
+  .drink-img {
+    width: 400px;
+    height: 400px;
+  }
+}

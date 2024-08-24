@@ -1,0 +1,33 @@
+.subH-section {
+  display: flex;
+}
+
+.subH-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding-bottom: 30px;
+  background-color: #ff9900;
+  /* border-top: 5px solid #ff2600; */
+}
+
+.subH-text {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: start;
+  text-shadow: 2px 2px 4px rgba(235, 17, 17, 0.7);
+}
+
+.subH-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.subH-text h2 {
+  font-size: 1.2em;
+}
