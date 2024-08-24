@@ -1,9 +1,6 @@
 .header {
   background-color: #ff9900;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 7px 10px;
 }
 
 .headerContent {
@@ -14,12 +11,15 @@
 }
 
 .title {
+  text-align: justify;
   font-size: 1.5em;
   color: white;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .subtitle {
-  font-size: 1em;
+  /* text-align: right; */
+  font-size: 0.9em;
   color: white;
 }
 
@@ -33,11 +33,12 @@
 }
 
 .navMenu {
-  background-color: #db86078f;
+  background-color: #ff6f21;
   position: absolute;
   top: 60px;
   right: 40px; /* Ajuste a posição para ficar ao lado do ícone do menu */
   width: 200px;
+  font-weight: bold;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

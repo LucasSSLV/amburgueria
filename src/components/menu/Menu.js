@@ -39,7 +39,7 @@ const Menu = () => {
   return (
     <section id="products">
       <h2 className="text">Hambúrgueres</h2>
-      <Slider {...settings}>
+      <Slider {...settings} className="geral">
         {burgers.map((burger, index) => (
           <div key={index} className="burger-item">
             <img src={burger.image} alt={burger.name} className="burger-img" />
@@ -61,7 +61,7 @@ const Menu = () => {
       </Slider>
 
       <h2 className="text">Bebidas</h2>
-      <Slider {...settings}>
+      <Slider {...settings} className="geral">
         {drinks.map((drink, index) => (
           <div key={index} className="drink-item">
             <img src={drink.image} alt={drink.name} className="drink-img"/>

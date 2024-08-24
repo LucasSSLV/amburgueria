@@ -1,9 +1,66 @@
-/* footer.css */
 .footer {
   display: grid;
-  background-color: #333333c0;
+  background-color: #ff9900;
   color: white;
   text-align: center;
   margin: 0;
-  /* padding: 1px 1x; */
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Criação da onda na borda superior */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Altera a altura da onda */
+  left: 0;
+  width: 100%;
+  height: 40px; /* Altura da onda */
+  background: white;
+  border-radius: 0 0 50% 50%; /* Cria o efeito de onda */
+  background-color: #33333300;
+  z-index: -1; /* Mantém a onda atrás do conteúdo do footer */
+}
+
+.contact-section {
+  display: flex;
+  align-items: start;
+  /* width: 100%; */
+  padding: 20px 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* Espaçamento entre os ícones */
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Tamanho do círculo */
+  height: 50px; /* Tamanho do círculo */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo quase branco */
+  border-radius: 50%; /* Deixa o ícone circular */
+  color: #3f3f3f; /* Cor do ícone */
+  font-size: 1.8em;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2); /* Aumenta o ícone em 20% */
+  color: #a6ada8;
+  background-color: rgba(255, 255, 255, 1); /* Fundo branco ao hover */
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #dfd2d2;
 }
